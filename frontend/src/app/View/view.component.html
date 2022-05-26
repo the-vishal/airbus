@@ -1,0 +1,54 @@
+<div id="container">
+  <div id="header">Unfold.</div>
+  <div class="headings">Select server-client frameworks to get started with!</div>
+
+  <!-- Form starts -->
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <div class="card">
+      <div class="headings BE">Backend Frameworks</div>
+      <div *ngFor="let framework of serverFrameworks">
+        <div class="input-container">
+          <input
+            id="BE"
+            type="radio"
+            class="custom-control-input"
+            value="{{ framework }}"
+            name="serverFramework"
+            formControlName="serverFramework"
+          />
+          <label class="custom-control-label" for="{{ framework }}">{{
+            framework
+          }}</label>
+        </div>
+      </div>
+    </div>
+    <div class="group-gap">
+      <div class="headings FE">Frontend Frameworks</div>
+      <div
+        class="custom-control custom-radio"
+        *ngFor="let framework of clientFrameworks"
+      >
+        <div class="input-container">
+          <input
+            id="FE"
+            type="radio"
+            class="custom-control-input"
+            value="{{ framework }}"
+            name="clientFramework"
+            formControlName="clientFramework"
+          />
+          <label class="custom-control-label" for="{{ framework }}">{{
+            framework}}
+          </label>
+        </div>
+      </div>
+      <div class="invalid-feedback" *ngIf="!myForm.errors?.required">
+        <!-- Submit Button -->
+        <button type="submit" class="submit">
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+  <!-- Form ends -->
+</div>
