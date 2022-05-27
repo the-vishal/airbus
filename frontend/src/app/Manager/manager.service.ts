@@ -8,8 +8,8 @@ export class ManagerService {
 
   constructor(private communicationService: CommunicationService) { }
 
-  serverFrameworks = ['C#', 'Python', 'Java', 'NodeJS', 'DJango'];
-  clientFrameworks = ['Angular', 'React', 'JS'];
+  serverFrameworks = ['.NET', 'Spring Boot', 'NodeJS', 'DJango'];
+  clientFrameworks = ['Angular', 'React', 'Vanilla JS'];
   languages = ['English', 'हिंदी', 'Français', 'Español', '中文', '日本語'];
   codes = ['en', 'hin', 'fr', 'es', 'zh', 'ja'];
 
@@ -26,6 +26,11 @@ export class ManagerService {
     let myMap = new Map();
     myMap.set('DJango', 1);
     myMap.set('Angular', 2);
+    myMap.set('Spring Boot', 3);
+    myMap.set('React', 4);
+    myMap.set('VanillaJS', 5);
+    myMap.set('NodeJS', 6);
+    myMap.set('NET', 7);
 
     var data = JSON.stringify({
       serverFramework: myMap.get(serverName),
