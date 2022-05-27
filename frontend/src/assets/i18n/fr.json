@@ -1,0 +1,30 @@
+{
+  "title":"déplier",
+  
+  "team": "\\ te·am ˌin·​vin·​ci·​ble",
+
+  "line1": "1. Full-stack open-source",
+
+  "line2": "générateur de code ",
+
+  "line3": "pour toute idée que vous pouvez imaginer et créer.",
+
+  "line4": "2. Nommez votre projet, sélectionnez les frameworks souhaités et codez en déplacement!",
+
+  "line5": "3. Voir dans:",
+
+  "selectServer": "Sélectionner Server Framework",
+
+  "selectServerWarn": "Veuillez sélectionner l’infrastructure du serveur",
+
+  "selectClient": "Sélectionner l’infrastructure client",
+
+  "selectClientWarn": "Veuillez sélectionner le cadre client",
+
+  "projectName": "Entrez le titre",
+
+  "projectNameWarn": "Veuillez entrer le titre",
+
+  "submit": "Envoyer"
+
+}
