@@ -14,7 +14,7 @@ from rest_framework.authentication import TokenAuthentication
 
 from django.conf import settings
 from django.http import HttpResponse
-from api.models import ConfigItem
+from api.models import ConfigItem, FileAddition
 from .choices import SERVER, CLIENT, DATABASE
 from api.serializers import ConfigItemSerializer
 
@@ -42,9 +42,16 @@ class CreateProjectView(APIView):
         # os.system(f_createapp)
         subprocess.run(b_createapp.split(' '))
         subprocess.run(f_createapp.split(' '))
+        os.chdir('frontend')
+        files = FileAddition.objects.filter(config__pk = self.frontend.pk)
+        for file in files:
+            filename = file.filename
+            content = file.content
+            with open(filename, 'w') as f:
+                f.write(content)
 
     def zip_shell(self):
-        os.chdir('../') 
+        os.chdir('../../') 
         subprocess.run(['zip', f'{self.project_name}.zip', '-r', f'{self.project_name}'])
 
     def zip_project(self, response):
