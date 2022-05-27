@@ -1,0 +1,30 @@
+{
+  "title":"unFold",
+  
+  "team": "\\ te·am ˌin·​vin·​ci·​ble",
+
+  "line1": "1. Open-source full-stack",
+
+  "line2": "code generator ",
+
+  "line3": "for any idea you can imagine and create.",
+
+  "line4": "2. Name your project, select desired frameworks and code on the go!",
+
+  "line5": "3. View in:",
+
+  "selectServer": "Select Server Framework",
+
+  "selectServerWarn": "Please select server framework",
+
+  "selectClient": "Select Client Framework",
+
+  "selectClientWarn": "Please select client framework",
+
+  "projectName": "Enter The Title",
+
+  "projectNameWarn": "Please enter the Title",
+
+  "submit": "Submit"
+
+}

@@ -1,0 +1,30 @@
+{
+  "title":"展开",
+  
+  "team": "\\ te·am ˌin·​vin·​ci·​ble",
+
+  "line1": "1. 开源全栈",
+
+  "line2": "代码生成器 ",
+
+  "line3": "对于您可以想象和创造的任何想法。",
+
+  "line4": "2.为您的项目命名，随时随地选择所需的框架和代码！",
+
+  "line5": "3. 查看:",
+
+  "selectServer": "选择服务器框架",
+
+  "selectServerWarn": "请选择服务器框架",
+
+  "selectClient": "选择客户端框架",
+
+  "selectClientWarn": "请选择客户端框架",
+
+  "projectName": "输入标题",
+
+  "projectNameWarn": "请输入标题",
+
+  "submit": "提交"
+
+}

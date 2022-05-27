@@ -1,0 +1,30 @@
+{
+  "title":"desplegar",
+  
+  "team": "\\ te·am ˌin·​vin·​ci·​ble",
+
+  "line1": "1. Pila completa de código abierto",
+
+  "line2": "generador de código ",
+
+  "line3": "para cualquier idea que puedas imaginar y crear.",
+
+  "line4": "2. ¡Asigne un nombre a su proyecto, seleccione los marcos deseados y codifique sobre la marcha!",
+
+  "line5": "3. Ver en:",
+
+  "selectServer": "Seleccione Server Framework",
+
+  "selectServerWarn": "Seleccione el marco del servidor",
+
+  "selectClient": "Seleccione Client Framework",
+
+  "selectClientWarn": "Seleccione el marco de trabajo del cliente",
+
+  "projectName": "Introduzca el título",
+
+  "projectNameWarn": "Por favor, introduzca el Título",
+
+  "submit": "Enviar"
+
+}

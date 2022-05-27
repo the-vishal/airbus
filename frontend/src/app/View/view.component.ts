@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
+import { ManagerService } from '../Manager/manager.service';
 
 @Component({
   selector: 'app-view',
@@ -7,31 +9,61 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./view.component.css'],
 })
 export class ViewComponent {
-  serverFrameworks = ['C#', 'Python', 'Java', 'NodeJS', 'DJango'];
-  clientFrameworks = ['Angular', 'React', 'JS'];
-
+  project: string = '';
   isSubmitted = false;
 
-  constructor(public fb: FormBuilder) {}
-
-  /*########### Form ###########*/
-  registrationForm = this.fb.group({
-    serverFramework: ['', [Validators.required]],
-    clientFramework: ['', [Validators.required]]
-  });
-
-  // Getter method to access form control
-  get myForm() {
-    return this.registrationForm.get('clientFramework');
+  constructor(
+    public fb: FormBuilder,
+    private translateService: TranslateService,
+    public managerService: ManagerService
+  ) {
+    this.translateService.use('en');
   }
 
-  // Submit Registration Form
-  onSubmit() {
+  changeLanguage(index: number) {
+    this.translateService.use(this.managerService.codes[index]);
+  }
+
+  registrationForm = this.fb.group({
+    serverName: ['', [Validators.required]],
+    clientName: ['', [Validators.required]],
+    projectName: ['', [Validators.required]],
+  });
+
+  changeServer(e: any) {
+    this.serverName?.setValue(e.target.value, {
+      onlySelf: true,
+    });
+  }
+
+  changeClient(e: any) {
+    this.clientName?.setValue(e.target.value, {
+      onlySelf: true,
+    });
+  }
+
+  // Access formcontrols getter
+  get serverName() {
+    return this.registrationForm.get('serverName');
+  }
+
+  get clientName() {
+    return this.registrationForm.get('clientName');
+  }
+
+  get projectName() {
+    return this.registrationForm.get('projectName');
+  }
+
+  onSubmit(): void {
+    this.isSubmitted = true;
     if (!this.registrationForm.valid) {
-      return false;
+      false;
     } else {
-      alert(JSON.stringify(this.registrationForm.value));
-      this.registrationForm.reset();
+      this.managerService.downloadData(this.projectName.value, this.serverName.value, this.clientName.value)
+      alert(
+        `Downloading files for project: ${JSON.stringify(this.projectName.value)}?`
+      );
     }
   }
 }

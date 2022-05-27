@@ -1,8 +1,32 @@
-/* Add application styles & imports to this file! */
-*{
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+:root {
+  --text: #58585D;
+  --text-dark: #161617;
+  --primary: #665df5;
+  --primary-dark: #544af4;
+  --line: #efefef;
+  --bg: #fff;
+  --bg-alt: #fdfdfd;
+  --font: "Mulish",sans-serif;
+  --font-size: 16px;
+  --radius: 4px;
+  --weight-normal: 400;
+  --weight-semi: 700;
+  --weight-bold: 900;
+  --container: 80%;
+  --container-max: 1356px;
+}
+
+html {
+  background: rgb(255, 255, 255);
+  font-family: var(--font);
+  font-size: var(--font-size);
+  color: var(--text);
+  text-rendering: optimizelegibility;
   box-sizing: border-box;
-  outline: none;
-  border: none;
-  color: white;
-  background: black;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
 }
