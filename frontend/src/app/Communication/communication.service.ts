@@ -26,13 +26,14 @@ export class CommunicationService {
 
     xhr.send();
   }
+  
   downloadData(data: string) {
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
 
     xhr.addEventListener('readystatechange', function () {
       if (this.readyState === 4) {
-        var blob = new Blob([data], { type: 'application/x-tar' });
+        var blob = new Blob([this.responseText]);
         FileSaver.saveAs(blob, 'code.zip');
       }
     });
