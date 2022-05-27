@@ -10,7 +10,7 @@ Team Link : https://www.hackerearth.com/challenges/hackathon/airbus-aerothon-40-
 
 Helping Developers with "Development Ready" code structure with frameworks of their choice. Connecting Frontend and Backend and provide some boilerplate code.
 
-Methodology: 
+## Methodology: 
 1. Modular Code.
 2. Layered Architecture.
 3. Native Language Support.
@@ -20,7 +20,7 @@ Methodology:
 7. Export and Run.
 
 
-Links:
-GitHub Repository: https://github.com/the-vishal/airbus
-API Collection: https://www.postman.com/collections/f8c8cfda871040639042
-Prototype UI: https://unfold-2.stackblitz.io/
+## Links:
+GitHub Repository: https://github.com/the-vishal/airbus 
+API Collection: https://www.postman.com/collections/f8c8cfda871040639042 
+Prototype UI: https://unfold.stackblitz.io/ 
