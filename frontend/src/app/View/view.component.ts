@@ -62,7 +62,7 @@ export class ViewComponent {
     } else {
       this.managerService.downloadData(this.projectName.value, this.serverName.value, this.clientName.value)
       alert(
-        `Downloading files for project: ${JSON.stringify(this.projectName.value)}?`
+        `Downloading files for project: ${JSON.stringify(this.projectName.value)}`
       );
     }
   }
